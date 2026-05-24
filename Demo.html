@@ -1,107 +1,167 @@
-<div class="container">
-  <h1>Welcome to the Demo Page</h1>
-  <p>This is a simple demonstration of a container in HTML.</p>
-</div>
-<style>
-  .container {
-    width: 80%;
-    margin: auto;
-    padding: 20px;
-    border: 2px solid #000;
-    background-color: #f9f9f9;
-  }
-    h1 {
-        text-align: center;
-        color: #333;
-    }
-    p {
-        font-size: 16px;
-        color: #666;
-    }
-</style>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>这是一个网页标签页标题</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
 
-<a href="index.html">Back to Home</a>
-<abbr title="This is a demonstration page for HTML containers.">Demo Page Info</abbr>
-<br>
-<img src="demo-image.jpg" alt="Demo Image" width="300">
-<br>
-<button onclick="alert('Button Clicked!')">Click Me</button>
-<br>
-<input type="text" placeholder="Enter some text here">
-<br>
-<select>
-  <option value="option1">Option 1</option>
-  <option value="option2">Option 2</option>
-  <option value="option3">Option 3</option>
-</select>
-<br>
-<textarea placeholder="Enter your comments here"></textarea>
-<br>
-<progress value="70" max="100"></progress>
-<br>
-<time datetime="2024-06-01T12:00">June 1,
-  2024 at 12:00 PM</time>
-<br>
-<mark>This text is highlighted.</mark>
-<br>
-<small>This is some small print text.</small>
-<br>
-<code>console.log('Hello, World!');</code>
-<br>
-<var>x = 10;</var>
-<br>
-<kbd>Ctrl + C</kbd>
-<br>
-<samp>User input sample text</samp>
-<br>
-<q>This is a quoted text.</q>
-<br>
-<sup>2</sup>
-<br>
-<sub>H2O</sub>
-<br>
-<del>This text is deleted.</del>
-<br>
-<ins>This text is inserted.</ins>
-<br>
-<fieldset>
-  <legend>Demo Fieldset</legend>
-  <p>This is a fieldset to group related elements.</p>
-</fieldset>
-<br>
-<details>
-  <summary>More Info</summary>
-  <p>This section contains additional information that can be expanded or collapsed.</p>
-</details>
-<br>
-<dialog open>
-  <p>This is a dialog box.</p>
-  <button onclick="this.parentElement.close()">Close</button>
-</dialog>
-<br>
-<template id="demo-template">
-  <p>This is content from a template.</p>
-</template>
-<script>
-  // Example of using the template
-  const template = document.getElementById('demo-template');
-  const clone = template.content.cloneNode(true);
-  document.body.appendChild(clone);
-</script>
-<br>
-<slot>This is default slot content.</slot>
-<br>
-<span>This is a span element.</span>
-<br>
-<span class="highlight">This span is highlighted using a class.</span>
-<style>
-  .highlight {
-    background-color: yellow;
-  }
-</style>
-<br>
-<nav>
-  <a href="section1.html">Section 1</a> |
-  <a href="section2.html">Section 2</a> |
-  <a href="section3.html">Section 3</a>
-</nav>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .card, .info-section {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover, .info-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        h1 {
+            color: #333333;
+            font-size: 24px;
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-align: center;
+            transition: color 0.3s ease;
+        }
+
+        p {
+            color: #666666;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 500;
+            align-self: flex-start;
+            margin-bottom: 15px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .img-wrapper {
+            width: 100%;
+            height: 160px;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 12px 20px;
+            font-size: 15px;
+            font-weight: 500;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.2s ease;
+            box-sizing: border-box;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-success {
+            background-color: #28a745;
+        }
+
+        .btn-success:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- 左侧区域：包含第一段代码的所有元素 -->
+        <div class="info-section">
+            <div>
+                <h1 id="first-title">这是一个一级标题</h1>
+                <p>这是一个段落。</p>
+                <a href="https://example.com">这是一个超链接</a>
+                <div class="img-wrapper">
+                    <img src="image.jpg" alt="示例图片">
+                </div>
+            </div>
+            <button id="myBtn" class="btn">点击修改上方标题</button>
+        </div>
+
+        <!-- 右侧区域：卡片魔术变化 -->
+        <div class="card">
+            <div>
+                <h1 id="page-title">你好，世界！</h1>
+                <p id="page-desc">这是一个合并了 HTML、CSS 和 JavaScript 的单页面网页示例。点击下方的按钮试试吧！</p>
+            </div>
+            <button id="action-btn" class="btn btn-success">点击触发交互</button>
+        </div>
+
+    </div>
+
+    <script>
+        // 第一段 JavaScript 交互逻辑
+        const btn = document.querySelector('#myBtn');
+
+        btn.addEventListener('click', function() {
+            alert('按钮被点击了！');
+            document.querySelector('#first-title').textContent = '文本已被修改';
+        });
+
+        // 第二段 JavaScript 交互逻辑
+        const button = document.getElementById('action-btn');
+        const title = document.getElementById('page-title');
+        const description = document.getElementById('page-desc');
+
+        button.addEventListener('click', function() {
+            title.textContent = "魔术发生了！";
+            title.style.color = "#28a745"; 
+            
+            description.textContent = "你成功触发了 JavaScript 事件监听器，网页的 DOM 结构已被动态修改。";
+            
+            alert('恭喜！你已成功运行了前端三大核心代码。');
+        });
+    </script>
+
+</body>
+</html>

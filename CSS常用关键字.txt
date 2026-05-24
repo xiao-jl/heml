@@ -1,0 +1,542 @@
+CSS常用关键字
+
+
+
+选择器 Selectors
+*              - 通配选择器
+div            - 标签选择器
+.box           - class 选择器
+#id            - id 选择器
+[type="text"]  - 属性选择
+A B            - 后代选择器
+A > B          - 子元素选择器
+A + B          - 相邻兄弟选择器
+A ~ B          - 通用兄弟选择器
+&              - CSS nesting 嵌套选择器
+
+
+
+伪类 Pseudo Classes
+:hover              - 鼠标悬停
+:active             - 点击状态
+:focus              - 获取焦点
+:focus-visible      - 键盘焦点
+:focus-within       - 内部聚焦
+:checked            - 选中状态
+:disabled           - 禁用状态
+:enabled            - 可用状态
+:required           - 必填
+:optional           - 可选
+:valid              - 验证成功
+:invalid            - 验证失败
+:in-range           - 范围内
+:out-of-range       - 超范围
+:read-only          - 只读
+:read-write         - 可编辑
+:first-child        - 第一个子元素
+:last-child         - 最后一个子元素
+:only-child         - 唯一子元素
+:first-of-type      - 同类型第一个
+:last-of-type       - 同类型最后一个
+:only-of-type       - 唯一类型
+:nth-child()        - 第 N 个子元素
+:nth-last-child()   - 倒数第 N 个
+:nth-of-type()      - 同类型第 N 个
+:nth-last-of-type() - 同类型倒数第 N 个
+:not()              - 排除选择器
+:is()               - 条件组合
+:where()            - 低优先级选择
+:has()              - 父选择器
+:root               - 根元素
+:empty              - 空元素
+:link               - 未访问链接
+:visited            - 已访问链接
+:any-link           - 所有链接
+:target             - 锚点目标
+:fullscreen         - 全屏状态
+:modal              - 模态状态
+:popover-open       - 弹出层打开状态
+:autofill           - 自动填充
+
+
+
+伪元素 Pseudo Elements
+::before                 - 前置内容
+::after                  - 后置内容
+::first-letter           - 首字母
+::first-line             - 首行
+::placeholder            - 输入提示
+::selection              - 选中文本
+::marker                 - 列表标记
+::file-selector-button   - 文件按钮
+::backdrop               - 背景遮罩
+::cue                    - 字幕样式
+::details-content        - details 内容
+
+
+
+盒模型 Box Model
+width        - 宽度
+height       - 高度
+min-width    - 最小宽度
+max-width    - 最大宽度
+min-height   - 最小高度
+max-height   - 最大高度
+inline-size  - 行方向尺寸
+block-size   - 块方向尺寸
+box-sizing   - 盒模型计算方式
+
+
+
+Margin / Padding
+margin          - 外边距
+margin-top      - 上外边距
+margin-right    - 右外边距
+margin-bottom   - 下外边距
+margin-left     - 左外边距
+padding          - 内边距
+padding-top      - 上内边距
+padding-right    - 右内边距
+padding-bottom   - 下内边距
+padding-left     - 左内边距
+
+
+
+Border / Outline
+border              - 边框
+border-width        - 宽度
+border-style        - 样式
+border-color        - 颜色
+border-top          - 上边框
+border-right        - 右边框
+border-bottom       - 下边框
+border-left         - 左边框
+border-radius       - 圆角
+outline             - 轮廓
+outline-width       - 宽度
+outline-style       - 样式
+outline-color       - 颜色
+outline-offset      - 偏移
+border-collapse     - 表格合并边框
+border-spacing      - 表格间距
+
+
+
+Display
+display              - 控制元素的显示类型（布局基础）
+block                - 块级元素（独占一行）
+inline               - 行内元素（不换行）
+inline-block         - 行内块（可设宽高但不换行）
+flex                 - 弹性布局容器（一维布局）
+grid                 - 网格布局容器（二维布局）
+table                - 表格布局
+inline-table         - 行内表格
+list-item            - 列表项样式
+none                 - 完全隐藏（不占空间）
+contents             - 自身不显示，只显示子元素
+
+
+
+Position
+position             - 控制元素定位方式
+static               - 默认文档流
+relative             - 相对自身位置偏移
+absolute             - 相对最近定位祖先
+fixed                - 相对视口固定
+sticky               - 滚动吸附定位
+top                  - 上偏移
+right                - 右偏移
+bottom               - 下偏移
+left                 - 左偏移
+inset                - 四边统一缩写（top/right/bottom/left）
+z-index             - 控制层级（谁盖住谁）
+
+
+
+Overflow
+overflow            - 内容溢出处理方式
+overflow-x          - 水平溢出
+overflow-y          - 垂直溢出
+visible             - 溢出可见
+hidden              - 隐藏溢出内容
+scroll              - 强制滚动条
+auto                - 自动滚动
+clip                - 直接裁剪（无滚动）
+
+
+
+Flex
+display: flex       - 开启弹性布局
+flex                - 简写（grow shrink basis）
+flex-grow           - 放大比例
+flex-shrink         - 缩小比例
+flex-basis          - 初始尺寸
+flex-direction      - 主轴方向
+row                 - 水平排列
+column              - 垂直排列
+row-reverse         - 反向水平
+column-reverse      - 反向垂直
+flex-wrap           - 是否换行
+justify-content     - 主轴对齐方式
+align-items         - 交叉轴对齐
+align-content       - 多行对齐
+align-self          - 单个元素对齐
+place-items         - align + justify 简写
+place-content       - 内容整体对齐
+place-self          - 单个元素对齐简写
+order               - 排序顺序
+gap                 - 间距
+row-gap             - 行间距
+column-gap          - 列间距
+
+
+
+Grid
+display: grid       - 开启网格布局
+grid-template-columns - 定义列
+grid-template-rows    - 定义行
+grid-template-areas   - 定义区域
+grid-column         - 控制列位置/跨度
+grid-row            - 控制行位置/跨度
+grid-area           - 区域命名/占位
+grid-auto-flow      - 自动排列方式
+grid-auto-columns   - 自动列宽
+grid-auto-rows      - 自动行高
+subgrid             - 继承父网格
+repeat()            - 重复定义轨道
+minmax()            - 最小最大范围
+gap                 - 网格间距
+row-gap             - 行间距
+column-gap          - 列间距
+
+
+
+Typography
+font                - 字体简写
+font-family         - 字体类型
+font-size           - 字体大小
+font-weight         - 字重（粗细）
+font-style          - 字体样式（斜体等）
+font-variant        - 字体变体
+line-height         - 行高
+letter-spacing      - 字间距
+word-spacing        - 词间距
+text-align          - 文本对齐
+text-align-last     - 最后一行对齐
+text-indent         - 首行缩进
+text-transform      - 大小写转换
+text-decoration     - 文本装饰（下划线等）
+text-shadow         - 文字阴影
+text-overflow       - 溢出显示方式
+white-space         - 空白处理规则
+text-wrap           - 是否换行
+word-break          - 强制换行规则
+overflow-wrap       - 溢出换行
+vertical-align      - 垂直对齐
+writing-mode        - 文字方向
+direction           - 文本方向
+unicode-bidi        - 双向文本控制
+hyphens             - 自动断词
+line-break          - 换行规则
+
+
+
+Background
+background          - 背景简写
+background-color    - 背景颜色
+background-image    - 背景图片
+background-size     - 背景尺寸
+background-position - 背景位置
+background-repeat   - 是否重复
+background-clip     - 背景裁剪范围
+background-origin   - 背景起点
+background-attachment - 滚动行为
+background-blend-mode - 背景混合模式
+
+
+
+Color
+color               - 文字颜色
+opacity             - 透明度
+rgb() / rgba()      - RGB颜色 / 带透明度
+hsl() / hsla()      - 色相/饱和度/亮度
+hwb()               - 现代颜色模型
+lab() / lch()       - 感知颜色模型
+oklab() / oklch()   - 更现代颜色空间
+color()             - 设备颜色函数
+color-mix()         - 颜色混合
+light-dark()        - 明暗模式切换
+
+
+
+Gradient
+linear-gradient()           - 线性渐变
+radial-gradient()           - 径向渐变
+conic-gradient()            - 锥形渐变
+repeating-linear-gradient()  - 重复线性渐变
+repeating-radial-gradient()  - 重复径向渐变
+repeating-conic-gradient()   - 重复锥形渐变
+
+
+
+Transform
+transform           - 变形总属性
+translate()         - 平移
+translateX()        - X轴移动
+translateY()        - Y轴移动
+translateZ()        - Z轴移动
+translate3d()       - 3D移动
+rotate()            - 旋转
+rotateX()           - X轴旋转
+rotateY()           - Y轴旋转
+rotateZ()           - Z轴旋转
+rotate3d()          - 3D旋转
+scale()             - 缩放
+scaleX()            - X缩放
+scaleY()            - Y缩放
+scaleZ()            - Z缩放
+scale3d()           - 3D缩放
+skew()              - 倾斜
+skewX()             - X倾斜
+skewY()             - Y倾斜
+matrix()            - 2D矩阵变换
+matrix3d()          - 3D矩阵变换
+perspective()       - 透视
+transform-origin    - 变形原点
+transform-style     - 3D嵌套方式
+backface-visibility - 背面是否可见
+
+
+
+Transition
+transition                 - 过渡简写
+transition-property        - 作用属性
+transition-duration        - 持续时间
+transition-delay           - 延迟
+transition-timing-function - 动画速度曲线
+linear            - 匀速
+ease              - 默认缓动
+ease-in           - 逐渐加速
+ease-out          - 逐渐减速
+ease-in-out       - 两端慢
+cubic-bezier()    - 自定义曲线
+steps()           - 步进动画
+
+
+
+Animation
+@keyframes          - 定义动画帧
+animation           - 动画简写
+animation-name      - 动画名称
+animation-duration  - 时长
+animation-delay     - 延迟
+animation-iteration-count - 循环次数
+animation-direction - 方向
+animation-fill-mode - 结束状态
+animation-play-state - 播放状态
+infinite            - 无限循环
+
+
+
+Filter
+filter              - 图像滤镜
+blur()              - 模糊
+brightness()        - 亮度
+contrast()          - 对比度
+grayscale()         - 灰度
+sepia()             - 复古
+invert()            - 反色
+saturate()          - 饱和度
+hue-rotate()        - 色相旋转
+opacity()           - 透明度
+drop-shadow()       - 投影
+backdrop-filter     - 背景滤镜
+
+
+
+Functions
+calc()              - 计算
+min()               - 最小值
+max()               - 最大值
+clamp()             - 范围限制
+var()               - 变量
+attr()              - 属性值
+url()               - 资源路径
+
+
+
+Math Functions
+sin()              - 正弦函数（用于三角计算）
+cos()              - 余弦函数
+tan()              - 正切函数
+asin()             - 反正弦
+acos()             - 反余弦
+atan()             - 反正切
+atan2()            - 双参数反正切（计算角度）
+pow()              - 幂运算（x 的 y 次方）
+sqrt()             - 平方根
+abs()              - 绝对值
+sign()             - 符号函数（正负判断）
+exp()              - 指数函数
+log()              - 对数函数
+hypot()            - 欧几里得距离计算
+
+
+
+Variables
+--variable-name     - 自定义 CSS 变量
+var(--variable)     - 使用 CSS 变量
+@property             - 定义可动画的 CSS 自定义属性
+
+
+
+Responsive
+@media              - 媒体查询（响应式布局）
+@container          - 容器查询（基于父容器）
+container-type      - 定义容器查询类型
+container-name      - 定义容器名称
+aspect-ratio        - 宽高比控制
+
+
+
+Scroll
+scroll-behavior     - 滚动行为（平滑滚动）
+scroll-snap-type    - 滚动吸附模式
+scroll-snap-align   - 吸附对齐方式
+scroll-snap-stop    - 是否强制停留
+scroll-margin       - 滚动吸附外边距
+scroll-padding      - 滚动吸附内边距
+scrollbar-width     - 滚动条宽度控制
+scrollbar-color     - 滚动条颜色控制
+overscroll-behavior - 边界滚动行为控制
+
+
+
+Images
+object-fit          - 图片适配方式
+object-position     - 图片位置调整
+image-rendering     - 图片渲染质量控制
+
+
+
+UI / Cursor
+cursor              - 鼠标指针样式
+pointer-events      - 是否响应鼠标事件
+user-select         - 是否允许选中文本
+caret-color         - 光标颜色
+accent-color        - 表单组件强调色
+appearance          - 控制原生控件外观
+
+
+
+Effects
+box-shadow          - 阴影效果
+mix-blend-mode      - 混合模式
+isolation           - 创建独立混合层
+clip-path           - 裁剪路径
+mask-image          - 遮罩图像
+mask-size           - 遮罩尺寸
+mask-position       - 遮罩位置
+
+
+
+Performance
+contain             - 性能隔离（布局/绘制优化）
+content-visibility  - 延迟渲染优化
+will-change         - 提示浏览器提前优化
+
+
+
+SVG
+fill                - 填充颜色
+fill-opacity        - 填充透明度
+stroke              - 描边颜色
+stroke-width        - 描边宽度
+stroke-opacity      - 描边透明度
+stroke-linecap      - 线端样式
+stroke-linejoin     - 连接样式
+cx                  - 圆心 X 坐标
+cy                  - 圆心 Y 坐标
+r                   - 半径
+x                   - X 坐标
+y                   - Y 坐标
+
+
+
+Modern CSS
+:has()              - 父级选择器（条件匹配）
+@layer              - CSS 层级系统
+@scope              - 作用域隔离
+@property              - 可动画 CSS 属性定义
+view-transition-name - 页面转场动画名称
+@view-transition     - 页面转场动画规则
+anchor()            - 锚点定位函数
+anchor-size()       - 锚点尺寸计算
+position-anchor     - 定位锚点绑定
+scroll-timeline     - 基于滚动的动画时间轴
+view-timeline       - 基于视口的动画时间轴
+
+
+
+At-rules
+@media              - 媒体查询规则
+@supports           - 特性检测
+@keyframes          - 动画帧
+@font-face          - 自定义字体
+@import             - 导入样式
+@page               - 打印页面规则
+@layer              - 层级控制
+@scope              - 作用域控制
+@property              - 自定义属性定义
+@container          - 容器查询规则
+@view-transition    - 页面转场规则
+
+
+
+Global Keywords
+inherit             - 继承父级值
+initial             - 使用默认值
+unset               - 自动重置
+revert              - 回退浏览器默认
+revert-layer        - 回退到上一层级
+!important          - 强制优先级
+
+
+
+Units
+px      - 像素
+%       - 百分比
+em      - 相对父元素
+rem     - 相对根元素
+vw      - 视口宽度
+vh      - 视口高度
+vmin    - 最小视口边
+vmax    - 最大视口边
+svw svh - 小视口单位
+lvw lvh - 大视口单位
+dvw dvh - 动态视口单位
+deg     - 角度
+rad     - 弧度
+turn    - 圈数
+s       - 秒
+ms      - 毫秒
+fr      - 网格分数单位
+
+
+
+Common Values
+none                - 无 / 不显示 / 无效果
+auto                - 自动计算
+normal              - 默认正常状态
+center              - 居中对齐
+start               - 起始对齐
+end                 - 结束对齐
+flex-start          - flex 起点对齐
+flex-end            - flex 终点对齐
+space-between       - 两端对齐，中间等距
+space-around        - 两侧留白均匀分布
+space-evenly        - 完全均匀分布间距
+hidden              - 隐藏内容
+visible             - 可见内容
+cover               - 覆盖填充（保持比例）
+contain             - 完整包含（保持比例）

@@ -1,0 +1,107 @@
+<div class="container">
+  <h1>Welcome to the Demo Page</h1>
+  <p>This is a simple demonstration of a container in HTML.</p>
+</div>
+<style>
+  .container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid #000;
+    background-color: #f9f9f9;
+  }
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    p {
+        font-size: 16px;
+        color: #666;
+    }
+</style>
+
+<a href="index.html">Back to Home</a>
+<abbr title="This is a demonstration page for HTML containers.">Demo Page Info</abbr>
+<br>
+<img src="demo-image.jpg" alt="Demo Image" width="300">
+<br>
+<button onclick="alert('Button Clicked!')">Click Me</button>
+<br>
+<input type="text" placeholder="Enter some text here">
+<br>
+<select>
+  <option value="option1">Option 1</option>
+  <option value="option2">Option 2</option>
+  <option value="option3">Option 3</option>
+</select>
+<br>
+<textarea placeholder="Enter your comments here"></textarea>
+<br>
+<progress value="70" max="100"></progress>
+<br>
+<time datetime="2024-06-01T12:00">June 1,
+  2024 at 12:00 PM</time>
+<br>
+<mark>This text is highlighted.</mark>
+<br>
+<small>This is some small print text.</small>
+<br>
+<code>console.log('Hello, World!');</code>
+<br>
+<var>x = 10;</var>
+<br>
+<kbd>Ctrl + C</kbd>
+<br>
+<samp>User input sample text</samp>
+<br>
+<q>This is a quoted text.</q>
+<br>
+<sup>2</sup>
+<br>
+<sub>H2O</sub>
+<br>
+<del>This text is deleted.</del>
+<br>
+<ins>This text is inserted.</ins>
+<br>
+<fieldset>
+  <legend>Demo Fieldset</legend>
+  <p>This is a fieldset to group related elements.</p>
+</fieldset>
+<br>
+<details>
+  <summary>More Info</summary>
+  <p>This section contains additional information that can be expanded or collapsed.</p>
+</details>
+<br>
+<dialog open>
+  <p>This is a dialog box.</p>
+  <button onclick="this.parentElement.close()">Close</button>
+</dialog>
+<br>
+<template id="demo-template">
+  <p>This is content from a template.</p>
+</template>
+<script>
+  // Example of using the template
+  const template = document.getElementById('demo-template');
+  const clone = template.content.cloneNode(true);
+  document.body.appendChild(clone);
+</script>
+<br>
+<slot>This is default slot content.</slot>
+<br>
+<span>This is a span element.</span>
+<br>
+<span class="highlight">This span is highlighted using a class.</span>
+<style>
+  .highlight {
+    background-color: yellow;
+  }
+</style>
+<br>
+<nav>
+  <a href="section1.html">Section 1</a> |
+  <a href="section2.html">Section 2</a> |
+  <a href="section3.html">Section 3</a>
+</nav>
